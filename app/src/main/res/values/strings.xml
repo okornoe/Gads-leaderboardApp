@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Gads-leaderboardApp</string>
+    <string name="learning_hours_data">Learning Hours data pace holder</string>
 </resources>
