@@ -15,6 +15,5 @@
             android:id="@+id/tv_learning_hours_data"
             android:textSize="24sp"
             android:text="@string/learning_hours_data"/>
-
     </ScrollView>
 </LinearLayout>
