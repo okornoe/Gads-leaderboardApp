@@ -10,18 +10,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import java.lang.Exception
-import java.lang.IllegalArgumentException
 
 class LearningHoursLeaderBoardViewModel : ViewModel(){
     private var _response = MutableLiveData<String>()
 
     val response: LiveData<String>
         get() = _response
-
-    private val _property = MutableLiveData<LearningHoursDataModel>()
-
-    val property: LiveData<LearningHoursDataModel>
-            get() = _property
 
     //New declaration to receive response
     private val _hoursDataList = MutableLiveData<List<LearningHoursDataModel>>()
@@ -39,17 +33,18 @@ class LearningHoursLeaderBoardViewModel : ViewModel(){
         getLearningHoursData()
     }
 
-    private fun getLearningHoursData() {
+    private fun getLearningHoursData(){
         coroutineScope.launch {
-            var getPropertiesDeferred = LeaderBoardApi.retrofitService.getProperties()
+            var getPropertiesDeferred = LeaderBoardApi.retrofitService.getHours()
 
             try {
-                val listResult = getPropertiesDeferred.await()
+                var listResult = getPropertiesDeferred.await()
 
-                _response.value = "Success: $listResult learning hours data"
+                //_response.value = "Success: ${listResult.size} learning hours data"
                 Log.d("ViewModel", _response.value!!)
-                _hoursDataList.value = listOf(listResult)
+                 _hoursDataList.value = listResult
             } catch (e: Exception) {
+                Log.d("Failure" , "no response")
                 _response.value = "Failure: ${e.message}"
             }
         }
@@ -61,12 +56,9 @@ class LearningHoursLeaderBoardViewModel : ViewModel(){
     }
 
     class Factory(): ViewModelProvider.Factory {
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(LearningHoursLeaderBoardViewModel::class.java)) {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
                 return LearningHoursLeaderBoardViewModel() as T
-            }
-            throw IllegalArgumentException("Unable to construct viewModel")
         }
     }
 
