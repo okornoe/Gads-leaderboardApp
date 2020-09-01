@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = " https://gadsapi.herokuapp.com"
+private const val BASE_URL = " https://gadsapi.herokuapp.com/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -21,9 +21,9 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface LeaderBoardApiService {
-    @GET("/api/hours")
-    fun getProperties():
-            Deferred<LearningHoursDataModel>
+    @GET("api/hours")
+     fun getHours():
+           Deferred<List<LearningHoursDataModel>>
 }
 
 object LeaderBoardApi {
