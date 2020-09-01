@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         ViewModelProvider(this, LearningHoursLeaderBoardViewModel.Factory()).get(LearningHoursLeaderBoardViewModel::class.java)
     }*/
 
-    private lateinit var hoursViewModel: LearningHoursLeaderBoardViewModel
+    //private lateinit var hoursViewModel: LearningHoursLeaderBoardViewModel
+    private lateinit var iQViewModel: LearningIQLeaderBoardViewModel
 
     private lateinit var learningHoursDataTextView: TextView
 
@@ -21,13 +22,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        hoursViewModel = ViewModelProvider(this).get(LearningHoursLeaderBoardViewModel::class.java)
+/*        hoursViewModel = ViewModelProvider(this).get(LearningHoursLeaderBoardViewModel::class.java)
         hoursViewModel.hoursDataList.observe(this, Observer { data ->
+            data.listIterator().hasNext()
+        })*/
+
+        iQViewModel = ViewModelProvider(this).get(LearningIQLeaderBoardViewModel::class.java)
+        iQViewModel.iQList.observe(this, Observer { data ->
             data.listIterator().hasNext()
         })
 
         learningHoursDataTextView = findViewById(R.id.tv_learning_hours_data)
 
-        learningHoursDataTextView.text = hoursViewModel.hoursDataList.value?.size.toString()
+        learningHoursDataTextView.text = iQViewModel.iQList.value.toString()
     }
 }
