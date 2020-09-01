@@ -24,6 +24,10 @@ interface LeaderBoardApiService {
     @GET("api/hours")
      fun getHours():
            Deferred<List<LearningHoursDataModel>>
+
+    @GET("api/SkillIq")
+        fun getSkillIq():
+            Deferred<List<LearningIQDataModel>>
 }
 
 object LeaderBoardApi {
