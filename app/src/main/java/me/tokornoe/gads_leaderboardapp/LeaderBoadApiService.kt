@@ -9,6 +9,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
 private const val BASE_URL = " https://gadsapi.herokuapp.com/"
+private const val GOOGLE_FORMS_BASE_URL = "https://docs.google.com/forms/d/e/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
