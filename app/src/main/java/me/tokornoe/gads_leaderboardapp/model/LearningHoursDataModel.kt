@@ -1,4 +1,4 @@
-package me.tokornoe.gads_leaderboardapp
+package me.tokornoe.gads_leaderboardapp.model
 
 data class LearningHoursDataModel(val name: String, val hours: Int,
                                   val country: String, val badgeUrl: String)
