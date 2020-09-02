@@ -1,5 +1,6 @@
 package me.tokornoe.gads_leaderboardapp.googleforms
 
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -27,7 +28,7 @@ private val retrofit = Retrofit.Builder()
         @Field("entry.243759480") lastName: String,
         @Field("entry.1254919597") email: String,
         @Field("entry.862272373") projectLinkToGithub: String,
-        )
+        ): Call<Void>
 }
 
 object GoogleWebFormsService {
