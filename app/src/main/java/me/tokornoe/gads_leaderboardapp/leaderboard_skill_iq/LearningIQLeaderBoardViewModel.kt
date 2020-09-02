@@ -1,4 +1,4 @@
-package me.tokornoe.gads_leaderboardapp
+package me.tokornoe.gads_leaderboardapp.leaderboard_skill_iq
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -9,6 +9,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import me.tokornoe.gads_leaderboardapp.network.LeaderBoardApi
+import me.tokornoe.gads_leaderboardapp.model.LearningIQDataModel
 import java.lang.Exception
 
 class LearningIQLeaderBoardViewModel : ViewModel() {
