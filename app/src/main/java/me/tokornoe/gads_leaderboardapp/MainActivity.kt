@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import me.tokornoe.gads_leaderboardapp.leaderboard_skill_iq.LearningIQLeaderBoardViewModel
 
 
 class MainActivity : AppCompatActivity() {
