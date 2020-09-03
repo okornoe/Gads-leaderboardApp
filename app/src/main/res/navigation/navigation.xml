@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/learningHoursFragment">
+
+    <fragment
+        android:id="@+id/learningHoursFragment"
+        android:name="me.tokornoe.gads_leaderboardapp.leaderboard_learninghours.LearningHoursLeaderBoardFragment"
+        android:label="Learning Hours"
+        tools:layout="@layout/fragment_learning_hours_leader_board"
+        />
+
+</navigation>
