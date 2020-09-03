@@ -38,16 +38,12 @@ class LearningHoursLeaderBoardViewModel : ViewModel(){
     private fun getLearningHoursData(){
         coroutineScope.launch {
             var getPropertiesDeferred = LeaderBoardApi.retrofitService.getHours()
-
-            try {
                 var listResult = getPropertiesDeferred.await()
-
-                //_response.value = "Success: ${listResult.size} learning hours data"
-                Log.d("ViewModel", _response.value!!)
-                 _hoursDataList.value = listResult
+            try {
+                 _hoursDataList.value = listResult //exception thrown here
             } catch (e: Exception) {
                 Log.d("Failure" , "no response")
-                _response.value = "Failure: ${e.message}"
+               _hoursDataList.value = ArrayList()
             }
         }
     }
