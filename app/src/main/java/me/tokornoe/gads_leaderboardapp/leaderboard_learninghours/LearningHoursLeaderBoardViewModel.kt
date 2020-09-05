@@ -14,10 +14,10 @@ import me.tokornoe.gads_leaderboardapp.network.LeaderBoardApi
 import java.lang.Exception
 
 class LearningHoursLeaderBoardViewModel : ViewModel(){
-    private var _response = MutableLiveData<String>()
+/*    private var _response = MutableLiveData<String>()
 
     val response: LiveData<String>
-        get() = _response
+        get() = _response*/
 
     //New declaration to receive response
     private val _hoursDataList = MutableLiveData<List<LearningHoursDataModel>>()
