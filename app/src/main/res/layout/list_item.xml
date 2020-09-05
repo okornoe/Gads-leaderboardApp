@@ -10,7 +10,7 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/image"
@@ -21,7 +21,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:imageFromUrl="@{property.badgeUrl}"
             />
 
         <TextView
@@ -33,8 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image"
-            tools:text="hours"
-            android:text="@{property.hours}"/>
+            android:text="34:45"/>
 
         <TextView
             android:id="@+id/name"
@@ -46,7 +44,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/hours"
             tools:text="name"
-            android:text="@{property.name}"/>
+            android:text="Okornoe"/>
 
         <TextView
             android:id="@+id/country"
@@ -57,7 +55,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"
-            android:text="@{property.country}"
+            android:text="Ghana"
             tools:text="country"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

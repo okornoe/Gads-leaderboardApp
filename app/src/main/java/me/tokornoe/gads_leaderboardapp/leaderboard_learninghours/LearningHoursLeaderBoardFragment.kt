@@ -18,7 +18,7 @@ class LearningHoursLeaderBoardFragment : Fragment() {
     /**
      * Lazily initialize our [OverviewViewModel].
      */
-    private val viewModel: LearningHoursLeaderBoardViewModel by lazy {
+    private val learningHoursLeaderBoardViewModel: LearningHoursLeaderBoardViewModel by lazy {
         ViewModelProvider(this).get(LearningHoursLeaderBoardViewModel::class.java)
     }
 
@@ -32,7 +32,8 @@ class LearningHoursLeaderBoardFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
-        binding.viewModel = viewModel
+        binding.viewModel = learningHoursLeaderBoardViewModel
+        binding.learningHours.adapter = LearningHoursLeaderBoardAdapter()
 
         return binding.root
     }
