@@ -1,3 +1,4 @@
+/*
 package me.tokornoe.gads_leaderboardapp.leaderboard_learninghours
 
 import android.view.LayoutInflater
@@ -48,4 +49,4 @@ private class LearningHoursDiffCallback : DiffUtil.ItemCallback<LearningHoursDat
     ): Boolean {
         return oldItem == newItem
     }
-}
+}*/

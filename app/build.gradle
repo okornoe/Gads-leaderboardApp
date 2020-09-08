@@ -8,6 +8,7 @@ android {
     buildToolsVersion "30.0.2"
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
 
     defaultConfig {
@@ -46,8 +47,8 @@ dependencies {
     kapt "androidx.lifecycle:lifecycle-compiler:$version_lifecycle_extensions"
 
     // Navigation
-    implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
-    implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0-rc02'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.0.0-rc02'
 
     // Core with Ktx
     implementation "androidx.core:core-ktx:$version_core"
@@ -68,6 +69,6 @@ dependencies {
     // Glide for image processing
     implementation "com.github.bumptech.glide:glide:$version_glide"
 
-    //kapt 'androidx.databinding:databinding-compiler:4.0.1'
+    kapt 'androidx.databinding:databinding-compiler:4.0.1'
 
 }
