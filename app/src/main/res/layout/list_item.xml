@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <import type="android.view.View"/>
-        <variable
-            name="property"
-            type="me.tokornoe.gads_leaderboardapp.model.LearningHoursDataModel" />
-    </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -17,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="95dp"
             android:scaleType="centerCrop"
-            android:contentDescription="badge"
+            android:contentDescription="image badge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +26,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image"
-            android:text="34:45"/>
+            tools:text="hours"
+            android:text="20"/>
 
         <TextView
             android:id="@+id/name"
@@ -44,7 +39,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/hours"
             tools:text="name"
-            android:text="Okornoe"/>
+            android:text="Kelvin"/>
 
         <TextView
             android:id="@+id/country"
@@ -58,4 +53,3 @@
             android:text="Ghana"
             tools:text="country"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
