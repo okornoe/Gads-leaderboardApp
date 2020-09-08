@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import me.tokornoe.gads_leaderboardapp.databinding.FragmentLearningHoursLeaderBoardBinding
+import me.tokornoe.gads_leaderboardapp.R
 
 /**
  * A simple [Fragment] subclass.
@@ -28,13 +28,7 @@ class LearningHoursLeaderBoardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_learning_hours_leader_board, container, false)
-        val binding = FragmentLearningHoursLeaderBoardBinding.inflate(inflater)
 
-        binding.lifecycleOwner = this
-
-        binding.viewModel = learningHoursLeaderBoardViewModel
-        binding.learningHours.adapter = LearningHoursLeaderBoardAdapter()
-
-        return binding.root
+        return inflater.inflate(R.layout.fragment_iq_leader_board, container, false)
     }
 }
