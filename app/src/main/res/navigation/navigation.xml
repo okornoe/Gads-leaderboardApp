@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/learningHoursFragment"
-        android:name="me.tokornoe.gads_leaderboardapp.leaderboard_learninghours.LearningHoursLeaderBoardFragment"
+        android:name="me.tokornoe.gads_leaderboardapp.leaderboard_learninghours.FragmentLearningHoursBoard"
         android:label="Learning Hours"
-        tools:layout="@layout/fragment_learning_hours_leader_board"
+        tools:layout="@layout/fragment_learning_hours_board"
         />
 
 </navigation>
